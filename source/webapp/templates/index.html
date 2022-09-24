@@ -1,1 +1,20 @@
 {% extends 'base.html' %}
+
+{% block content %}<br>
+    <div class="row">
+    {% for image in images %}
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+              <a href="{% url 'webapp:image_view' image.pk %}">
+                  <img src="{{ image.photo.url }}" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">{{ image.signature }}</h5>
+                <p class="card-text">{{ image.author }}</p>
+                  <p class="card-text">{{ image.created_at }}</p>
+                  <a href="#" class="btn btn-primary">К альбому</a>
+              </div>
+            </div><br>
+          </div>
+    {% endfor %}
+    </div>
+{% endblock %}

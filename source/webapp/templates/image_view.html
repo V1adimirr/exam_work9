@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <br>
+    <div class="card mb-3" style="max-width: 1080px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{ image.photo.url }}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ image.signature }}</h5>
+        <p class="card-text">{{ image.author }}</p>
+        <p class="card-text"><small class="text-muted">{{ image.created_at }}</small></p>
+          <a href="{% url 'webapp:image_update' image.pk %}" class="btn btn-primary">Изменить</a>
+          <a href="{% url 'webapp:image_delete' image.pk %}" class="btn btn-primary">Удалить</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock%}

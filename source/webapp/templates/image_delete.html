@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Удаление фото{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+    {% csrf_token %}
+    <h6>Вы уверены что хотите удалить фото:</h6>
+        <img src="{{ image.photo.url }}" class="card-img-top" alt="..." style="max-width: 240px">
+    <p><button type="submit" >Да.</button></p>
+</form>
+    <button type="submit">
+        <a href="{% url "webapp:image_view" image.pk %}"  style=" color : black; text-decoration: none" >Нет</a>
+    </button>
+{% endblock %}
