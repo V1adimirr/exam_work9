@@ -1,0 +1,109 @@
+[
+{
+    "model": "webapp.imagesmodel",
+    "pk": 1,
+    "fields": {
+        "photo": "images/dreamstime_xl_152015541-scaled.jpg",
+        "signature": "Фотка",
+        "created_at": "2022-09-24T06:40:07.143Z",
+        "author": 1,
+        "album": 1
+    }
+},
+{
+    "model": "webapp.imagesmodel",
+    "pk": 2,
+    "fields": {
+        "photo": "images/pic3.jpg",
+        "signature": "Велосипедист",
+        "created_at": "2022-09-24T06:47:12.570Z",
+        "author": 1,
+        "album": 1
+    }
+},
+{
+    "model": "webapp.imagesmodel",
+    "pk": 3,
+    "fields": {
+        "photo": "images/pic4.jpg",
+        "signature": "Компьютер",
+        "created_at": "2022-09-24T06:47:42.438Z",
+        "author": 1,
+        "album": 1
+    }
+},
+{
+    "model": "webapp.imagesmodel",
+    "pk": 4,
+    "fields": {
+        "photo": "images/pic2.jpg",
+        "signature": "Спорт",
+        "created_at": "2022-09-24T06:50:30.905Z",
+        "author": 1,
+        "album": null
+    }
+},
+{
+    "model": "webapp.imagesmodel",
+    "pk": 5,
+    "fields": {
+        "photo": "images/pic1.jpg",
+        "signature": "Что то",
+        "created_at": "2022-09-24T06:51:09.154Z",
+        "author": 1,
+        "album": null
+    }
+},
+{
+    "model": "webapp.imagesmodel",
+    "pk": 6,
+    "fields": {
+        "photo": "images/pic-4.jpg",
+        "signature": "Стаканчики",
+        "created_at": "2022-09-24T10:01:54.392Z",
+        "author": 1,
+        "album": null
+    }
+},
+{
+    "model": "webapp.imagesmodel",
+    "pk": 9,
+    "fields": {
+        "photo": "images/pic-6_Jt34rJw.jpg",
+        "signature": "Что то",
+        "created_at": "2022-09-24T10:38:02.263Z",
+        "author": 1,
+        "album": null
+    }
+},
+{
+    "model": "webapp.albummodel",
+    "pk": 1,
+    "fields": {
+        "image_name": "Proger",
+        "description": "Какое то описание",
+        "album_author": 1,
+        "created_at_album": "2022-09-24T06:39:18.514Z"
+    }
+},
+{
+    "model": "webapp.albummodel",
+    "pk": 2,
+    "fields": {
+        "image_name": "Work",
+        "description": "Какой то альбом",
+        "album_author": 2,
+        "created_at_album": "2022-09-24T11:05:11.766Z"
+    }
+},
+{
+    "model": "webapp.albummodel",
+    "pk": 3,
+    "fields": {
+        "image_name": "State",
+        "description": "Ещё какой то альбом",
+        "album_author": 1,
+        "created_at_album": "2022-09-24T11:05:52.685Z"
+    }
+}
+]
