@@ -7,14 +7,14 @@ from webapp.models import ImagesModel
 
 class IndexView(ListView):
     model = ImagesModel
-    template_name = 'index.html'
+    template_name = 'images_temp/index.html'
     context_object_name = 'images'
     ordering = '-created_at'
 
 
 class ImageView(DetailView):
     model = ImagesModel
-    template_name = 'image_view.html'
+    template_name = 'images_temp/image_view.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -23,7 +23,7 @@ class ImageView(DetailView):
 
 
 class ImageCreate(CreateView):
-    template_name = 'image_create.html'
+    template_name = 'images_temp/image_create.html'
     form_class = ImageForm
 
     def form_valid(self, form):
@@ -37,7 +37,7 @@ class ImageCreate(CreateView):
 
 class ImageUpdate(UpdateView):
     model = ImagesModel
-    template_name = 'image_update.html'
+    template_name = 'images_temp/image_update.html'
     form_class = ImageForm
 
     def get_success_url(self):
@@ -45,7 +45,7 @@ class ImageUpdate(UpdateView):
 
 
 class ImageDelete(DeleteView):
-    template_name = 'image_delete.html'
+    template_name = 'images_temp/image_delete.html'
     model = ImagesModel
     context_object_name = 'image'
     success_url = reverse_lazy('webapp:index')
