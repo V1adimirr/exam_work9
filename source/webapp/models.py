@@ -7,7 +7,7 @@ class ImagesModel(models.Model):
     signature = models.CharField(max_length=50, verbose_name='Подпись')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     author = models.ForeignKey(get_user_model(), related_name='images_author',
-                               on_delete=models.CASCADE, verbose_name='Автор')
+                               on_delete=models.CASCADE, default='Anonymous', verbose_name='Автор')
     album = models.ForeignKey('webapp.AlbumModel', null=True, blank=True, related_name='images_album',
                               on_delete=models.CASCADE, verbose_name='Альбом')
 

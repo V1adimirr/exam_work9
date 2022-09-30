@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Удаление альбома{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+    {% csrf_token %}
+    <h6>Вы уверены что хотите удалить альбом: {{ album.image_name }}</h6>
+    <p><button type="submit" >Да.</button></p>
+</form>
+    <button type="submit">
+        <a href="{% url "webapp:album_view" %}"  style=" color : black; text-decoration: none" >Нет</a>
+    </button>
+{% endblock %}

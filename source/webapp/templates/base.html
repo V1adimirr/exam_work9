@@ -24,6 +24,7 @@
           <li class="nav-item">
           <a class="nav-link" aria-current="page" href="{% url 'webapp:album_view' %}">Альбомы</a>
         </li>
+          {% block nav %}{% endblock %}
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="{% url 'webapp:image_create' %}">Добавить</a>
         </li>

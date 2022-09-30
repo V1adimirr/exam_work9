@@ -11,7 +11,9 @@
                 <h5 class="card-title">{{ image.signature }}</h5>
                 <p class="card-text">{{ image.author }}</p>
                   <p class="card-text">{{ image.created_at }}</p>
-                  <a href="#" class="btn btn-primary">К альбому</a>
+                  {% if image.album.pk %}
+                  <a href="{% url 'webapp:album_detail' image.album.pk  %}" class="btn btn-primary">К альбому</a>
+                  {% endif %}
               </div>
             </div><br>
           </div>
